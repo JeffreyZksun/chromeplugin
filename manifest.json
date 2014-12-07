@@ -1,0 +1,22 @@
+{
+	"manifest_version": 2,
+	"name": "Chrome plugin",
+	"version": "1.0.1",
+	"description": "Change the text of baidu",
+	"browser_action": {
+		"default_icon": "logo.jpg"
+	},
+	"permissions": [
+		"http://*/",
+		"bookmarks",
+		"tabs",
+		"history"
+	] ,
+	"content_scripts": [
+		{
+			"matches": ["http://www.baidu.com/*"],
+			"css": [],
+			"js": ["plugin.js"]
+		}
+	]
+}
